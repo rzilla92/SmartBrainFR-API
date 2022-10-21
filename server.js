@@ -11,7 +11,7 @@ const image = require('./controllers/image')
 const db = require('knex')({
     client: 'pg',
     connection: {
-      host : 'postgresql-corrugated-61835',
+      connectionString : process.env.DATABASE_URL,
       ssl: true
     }
 })
